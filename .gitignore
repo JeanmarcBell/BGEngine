@@ -1,0 +1,8 @@
+obj/
+bin/
+*.suo
+*.user
+*.cachefile
+/packages/*
+/packages/Newtonsoft.Json.6.0.4
+/packages/repositories.config
