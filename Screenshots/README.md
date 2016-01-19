@@ -6,7 +6,7 @@ Voronoi cell island generator: WPF application that generates a procedural islan
 #Custom OpenTK engine projects:
 Hex map UI Selector: Little hex-based 'game' using my OpenTK based engine. Demonstrates UI elements.
 
-Hex map and A*: Shows a few buildings and the A* roads between buildings (Please excuse the programmer art)
+Hex map and A-Star: Shows a few buildings and the A-Star roads between buildings (Please excuse the programmer art).
 
 QuadTree and hitboxes: Uses a quadtree to calculate physics on many objects simultaneously. Object hitboxes and quadtree bounds are displayed.
 
