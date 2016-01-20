@@ -54,20 +54,20 @@ namespace BGEngine
 
             while ((at * 2 + 1) < Count)
             {
-                int largest_child = at * 2;
+                int largestChild = at * 2;
                 if ( (at * 2 + 2) < Count )
                 {
                     T leftChild = Elements[at * 2 + 1];
                     T rightChild = Elements[at * 2 + 2];
-                    largest_child += leftChild.CompareTo(rightChild) > 0 ? 1 : 2;
+                    largestChild += leftChild.CompareTo(rightChild) > 0 ? 1 : 2;
                 }
 
-                if (Elements[at].CompareTo(Elements[largest_child]) < 0)
+                if (Elements[at].CompareTo(Elements[largestChild]) < 0)
                 {
                     T temp = Elements[at];
-                    Elements[at] = Elements[largest_child];
-                    Elements[largest_child] = temp;
-                    at = largest_child;
+                    Elements[at] = Elements[largestChild];
+                    Elements[largestChild] = temp;
+                    at = largestChild;
                 }
                 else
                     break;

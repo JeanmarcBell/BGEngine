@@ -64,8 +64,6 @@ namespace BGEngine.Rendering
 
             isFboBound = true;
             GL.Ext.BindFramebuffer(FramebufferTarget.FramebufferExt, FboHandle);
-            //GL.DrawBuffer(DrawBufferMode.ColorAttachment0);
-            //GL.DrawBuffer((DrawBufferMode)FramebufferAttachment.ColorAttachment0Ext);
 
             GL.ClearColor(ClearColor);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);

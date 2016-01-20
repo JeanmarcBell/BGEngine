@@ -33,8 +33,6 @@ namespace BGEngine
         public Texture2D FontTexture { get; set; }
         public Dictionary<char, Glyph> Glyphs { get; set; }
         private static string DefaultCharacterSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890~!@#$%^&*()-_=+;:'\",<.>/?\\|`";
-        
-
 
         public UIFont(string fontFamily, float pointSize)
         {
@@ -45,7 +43,7 @@ namespace BGEngine
         }
 
         /// <summary>
-        /// Returns the size of a texture which will fit the entire Glyph map.The texture is
+        /// Returns the size of a texture which will fit the entire Glyph map.The texture
         /// has power of 2 dimensions and width is guaranteed to be >= height.
         /// </summary>
         /// <param name="totalWidth">Total width of all glyphs</param>

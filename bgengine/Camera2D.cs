@@ -25,7 +25,6 @@ namespace BGEngine
         public void CenterCameraAt(Vector2 location, float screenWidth, float screenHeight)
         {
             Offset = -location + new Vector2(screenWidth / 2.0f, screenHeight / 2.0f);
-            //Offset = new Vector2((float)Math.Round((double)Offset.X), (float)Math.Round((double)Offset.Y));
         }
 
         public void ApplyCameraTransformation(float parallaxLevel = 1.0f)

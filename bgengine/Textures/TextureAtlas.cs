@@ -124,7 +124,6 @@ namespace BGEngine
             atlasBitmap.UnlockBits(bmpData);
             atlasBitmap.Save("test.png");
             atlasBitmap.Dispose();
-
         }
 
         public Texture2D this[string textureName]

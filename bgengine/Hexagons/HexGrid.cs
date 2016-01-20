@@ -27,9 +27,9 @@ namespace BGEngine.Hexagons
 
         public HexGrid(int width, int height)
         {
-            this.Width = width;
-            this.Height = height;
-            this.Area = width * height;
+            Width = width;
+            Height = height;
+            Area = width * height;
             grid = new T[width, height];
         }
 
@@ -83,7 +83,7 @@ namespace BGEngine.Hexagons
         public List<T> Neighbours(int x, int y)
         {
             List<T> arr = new List<T>();
-            foreach(HexDirection dir in neighbours.Keys) 
+            foreach (HexDirection dir in neighbours.Keys)
             {
                 arr.Add(Neighbour(x, y, dir));
             }
@@ -106,7 +106,7 @@ namespace BGEngine.Hexagons
             int offset = y % 2 == 0 ? 0 : (start.HexGridLocation.Y % 2);
             int x = target.HexGridLocation.X - start.HexGridLocation.X - offset;
             Point p = new Point(x, y);
-            
+
             var dir = neighbours.Single(kv => kv.Value == p).Key;
             return dir;
         }
@@ -121,12 +121,6 @@ namespace BGEngine.Hexagons
             return vec;
         }
 
-        //public HexDirections InvertDirection(HexDirections direction)
-        //{
-        //    var invertedDir = ((int)direction + 3) % neighbours.Count;
-        //    return (HexDirections)invertedDir;
-        //}
-
         public List<T> Range(int x, int y, int range)
         {
             List<T> results = new List<T>();
@@ -139,8 +133,6 @@ namespace BGEngine.Hexagons
                     var dz = -dx - dy;
                     Vector3 cubed = new Vector3(dx + center.X, dy + center.Y, dz + center.Z);
                     Vector2 offsetVec = CubedToOffset(cubed);
-                    //offsetVec.X += x;
-                    //offsetVec.Y += y;
                     results.Add(this[(int)offsetVec.X, (int)offsetVec.Y]);
                 }
             }
